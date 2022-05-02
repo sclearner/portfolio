@@ -10,6 +10,10 @@ a {
     color: #ccc; 
 }
 
+ul {
+    list-style-type: none;
+}
+
 .desktop .navbar {
     display: flex;
     position: fixed;
@@ -60,8 +64,39 @@ a {
 .button a {
     display: block;
     font-size: 2.7rem;
-    height: 3.5rem;
+    height: 3.2rem;
     width: 13rem;
-    padding-top: 0.5rem;
+    padding-top: 0.8rem;
 }
 
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+#start {
+    background-image: linear-gradient(to bottom right, #2b2b2b, #121212);
+}
+
+#info {
+    top: 100vh;
+    background-color: #ffad4c;
+}
+
+#skills {
+    top: 200vh;
+    background-color: #56f870;
+}
+
+#projects {
+    top: 300vh;
+    background-image: linear-gradient(to bottom, #50b5fe, rgba(80, 181, 254, 0.7));
+}
+
+#contact {
+    top: 400vh;
+    background-image: linear-gradient(to bottom right, #2b2b2b, #121212);
+}
