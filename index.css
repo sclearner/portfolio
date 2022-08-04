@@ -5,6 +5,12 @@
     font-size: var(--size-default);
 }
 
+@media only screen and (max-width: 1000px) {
+    * {
+        --size-default: 8px;
+    }
+}
+
 a {
     text-decoration: none;
     color: #ccc; 
@@ -87,7 +93,50 @@ section {
 }
 
 #start {
-    background-image: linear-gradient(to bottom right, #2b2b2b, #121212);
+    background-image: linear-gradient(to bottom right, #666666, #121212);
+}
+
+.selfie {
+    display: block;
+    position: absolute;
+}
+
+.selfie img {
+    margin-top: 7.0rem;
+    margin-left: 3vw;
+    top: 0;
+    left: 0;
+    height: 130vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .selfie img {
+        margin-left: -3vw;
+    }
+}
+
+.welcome {
+    display: block;
+    position: relative;
+    margin-top: 20%;
+    margin-left: 50vw;
+    color: white;
+}
+
+.welcome h2 {
+    font-size: 7rem;
+    color: #fc5656;
+    margin: 0 0 0 0;
+}
+
+.welcome h3 {
+    font-size: 4rem;
+    margin: 0 0 0 0;
+}
+
+.welcome h4 {
+    font-size: 3rem;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 #info {
@@ -107,5 +156,5 @@ section {
 
 #contact {
     top: 400vh;
-    background-image: linear-gradient(to bottom left, #2b2b2b, #121212);
+    background-image: linear-gradient(to bottom left, #666666, #121212);
 }
