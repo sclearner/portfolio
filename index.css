@@ -2,7 +2,7 @@
 * {
     --size-default: 2vh;
     --size-avatar: 15vh;
-    --nav-height: 4.0vh;
+    --nav-height: 5vh;
     scroll-behavior: smooth;
     font-family: 'Josefin Sans',sans-serif;
     font-size: var(--size-default);
@@ -61,7 +61,7 @@ body {
 
 .desktop .navbar > :nth-child(2) {
     display: flex;
-    flex-grow: 200;
+    flex-grow: 250;
     justify-content: flex-end;
     align-items: center;
     margin: 0 0 0 0;
@@ -75,7 +75,7 @@ body {
 
 .button a {
     display: block;
-    font-size: 2.7vh;
+    font-size: 3vh;
     height: 3.2vh;
     width: 13vh;
     padding-top: 0.8vh;
@@ -161,12 +161,12 @@ section {
 }
 
 #info .name h2 {
-    font-size: 7vh;
+    font-size: 9vh;
     margin: 1vh 0 0 0;
 }
 
 #info .name h4 {
-    font-size: 2vh;
+    font-size: 3vh;
     margin: 1vh 0 0 0;
 }
 
@@ -198,7 +198,7 @@ section {
     padding-left: 1vw;
     padding-right: 1vw;
     margin-right: auto;
-    font-size: 3vh;
+    font-size: 5vh;
 }
 
 #info ul {
@@ -206,7 +206,7 @@ section {
 }
 
 #info li {
-    font-size: 2vh;
+    font-size: 3vh;
     margin-bottom: 0.5vh;
 }
 
