@@ -1,5 +1,7 @@
 * {
     --size-default: 10px;
+    --size-avatar: 15vh;
+    --nav-height: 4.0rem;
     scroll-behavior: smooth;
     font-family: 'Josefin Sans',sans-serif;
     font-size: var(--size-default);
@@ -35,7 +37,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 4.0rem;
+    height: var(--nav-height);
     background: #151515;
     text-align: center;
     z-index: 2003;
@@ -46,7 +48,7 @@ body {
 
 .desktop #home {
     display: flex;
-    height: 4.0rem;
+    height: var(--nav-height);
     width: 7.6rem;
     justify-content: center;
     align-items: center;
@@ -144,9 +146,116 @@ section {
     background-color: #ffad4c;
 }
 
+#info .background {
+    position: relative;
+    float: right;
+    display: block;
+    height: 100vh;
+    width: calc(800/1024*100vh);
+}
+
+#info .avatar, #info .name, #info fieldset {
+    position: absolute;
+    top: 8vh;
+    left: 5vw;
+}
+
+#info .name {
+    display: block;
+    left: calc(6vw + 3/4*var(--size-avatar));
+}
+
+#info .name h2 {
+    font-size: 7rem;
+    margin: 1rem 0 0 0;
+}
+
+#info .name h4 {
+    font-size: 2rem;
+    margin: 1rem 0 0 0;
+}
+
+#info .avatar {
+    position: absolute;
+    display: block;
+    height: var(--size-avatar);
+    width: calc(3/4*var(--size-avatar));
+}
+
+#info .learn {
+    position: absolute;
+    top: calc(var(--size-avatar) + 2vh);
+}
+
+#info fieldset{
+    position: relative;
+    display: block;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    margin-bottom: 3rem;
+    width: 50vw;
+    height: 30vh;
+}
+
+#info fieldset legend {
+    margin-left: auto;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-right: auto;
+    font-size: 3rem;
+}
+
+#info ul {
+    list-style-type: disc;
+}
+
+#info li {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 #skills {
     top: 200vh;
     background-color: #56f870;
+}
+
+#skills .bg-decor {
+    --size-plane: 90vh;
+    display: block;
+    position: absolute;
+    float: left;
+    height: var(--size-plane);
+    width: var(--size-plane);
+    top: 10vh;
+    left: calc(50vw - 100vh/2);
+}
+
+#skills .box {
+    position: absolute;
+    background-color: rgba(214, 214, 214, 0.75);
+    border-radius: 2rem;
+} 
+
+#skills .stat {
+    top: 6rem;
+    left: 2vw;
+    height: calc(100vh - 8rem);
+    width: 30vw;
+}
+
+#skills .skills {
+    top: 6rem;
+    left: calc(6rem + 30vw);
+    height: calc((100vh - 8rem)*0.7 - 4rem);
+    width: calc(70vw - 12rem);
+}
+
+#skills .cert {
+    top: calc(4rem + calc((100vh - 8rem)*0.7));
+    left: calc(6rem + 30vw);
+    height: calc((100vh - 8rem)*0.3 + 2rem);
+    width: calc(70vw - 12rem);
 }
 
 #projects {
@@ -154,7 +263,103 @@ section {
     background-image: linear-gradient(to bottom, #50b5fe, rgba(80, 181, 254, 0.7));
 }
 
+#projects .cloud {
+    display: block;
+    position: absolute;
+    top: calc(100vh - 10vw);
+    left: 0;
+    height: 10vw;
+    width: 100vw;
+}
+
+#projects h2 {
+    display: block;
+    position: absolute;
+    top: var(--nav-height);
+    width: 100vw;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#projects .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: calc(var(--nav-height) + 8rem);
+    left: 5vw;
+    height: 70vh;
+    width: 90vw;
+}
+
+#projects .flex-container .box {
+    background-color: #c4c4c4;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 31vh;
+    width: 28vw;
+}
+
+#projects .flex-container .box:hover {
+    margin: 1vh 0.5vw 1vh 0.5vw;
+    height: 33vh;
+    width: 29vw;
+} 
+
 #contact {
     top: 400vh;
     background-image: linear-gradient(to bottom left, #666666, #121212);
+    color: white;
+}
+
+#contact .blank {
+    display: block;
+    height: calc(var(--nav-height) + 2rem);
+    width: 100vw;
+}
+
+#contact h1 {
+    margin: 0 0 1rem 0;
+}
+
+#contact h1, #contact span {
+    font-size: 7rem;
+    font-style: italic;
+}
+
+#contact h2 {
+    font-size: 5rem;
+}
+
+#contact .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 15vw;
+    width: 70vw;
+    height: 18vh;
+}
+
+#contact .credit {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    top: calc(100vh - 7rem);
+    width: 100vw;
+    height: 7rem;
+    font-size: 3rem;
+}
+
+#contact .flex-container img {
+    margin: 1.5vh 0 1.5vh 0;
+    width: 15vh;
+    height: 15vh;
+}
+
+#contact .flex-container img:hover {
+    margin: 0 0 0 0;
+    width: 18vh;
+    height: 18vh;
 }
