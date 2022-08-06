@@ -1,17 +1,11 @@
 /*************** Desktop **********************/
 * {
-    --size-default: 10px;
+    --size-default: 2vh;
     --size-avatar: 15vh;
     --nav-height: 4.0vh;
     scroll-behavior: smooth;
     font-family: 'Josefin Sans',sans-serif;
     font-size: var(--size-default);
-}
-
-@media only screen and (max-width: 1000px) {
-    * {
-        --size-default: 8px;
-    }
 }
 
 a {
@@ -350,7 +344,7 @@ section {
     top: calc(100vh - 7vh);
     width: 100vw;
     height: 7vh;
-    font-size: 3vh;
+    margin: 0 0 0 0;
 }
 
 #contact .flex-container img {
