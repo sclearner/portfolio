@@ -9,7 +9,8 @@
         <title>Ngô Ngọc Sâm | Portfolio</title>
         <link rel="shortcut icon" type="image/x-icon" href="assets/Logo.svg">
         <!--CSS-->
-        <link rel="stylesheet" href="index.css">
+        <link id="landscape" rel="stylesheet" href="landscape.css" media="">
+        <link id="portrait" rel="stylesheet" href="portrait.css" media="none">
     </head>
     <body>
         <div class="desktop">
@@ -39,7 +40,7 @@
                     <img class = "avatar" src = "assets\avatar.png">
                     <div class = "name">
                         <h2> Ngô Ngọc Sâm</h2>
-                        <h4> Giới tính: Nam &emsp; &emsp; &emsp; &emsp; &emsp; Ngày sinh: 15/02/2003</h4>
+                        <h4> Giới tính: Nam <span>&emsp; &emsp; &emsp; &emsp; &emsp;</span> Ngày sinh: 15/02/2003</h4>
                     </div>
                     <div class="learn">
                         <fieldset>
@@ -81,7 +82,7 @@
                     <div class="blank"></div>
                     <h1>"<span style="color: #e00303;">Success</span> is getting what you want</h1>
                     <h1 style="text-align: right;"><span style="color: #07a316;">happiness</span> is wanting what you get."</h1>
-                    <p style="text-align:right; font-size: 2rem">W.P.Kinsella &emsp; &emsp; &emsp;</p>
+                    <span id="portrait"><p style="text-align:right; font-size: 2rem">W.P.Kinsella &emsp; &emsp; &emsp;</p></span>
                     <h2 style="text-align: center;">Liên hệ</h2>
                     <div class="flex-container">
                         <a href="https://fb.com/ngongoc.sam"><img src="assets/fb.png"></a>
@@ -97,5 +98,6 @@
                 </section>
             </div>
         </div>
+    <script src="index.js"></script>
     </body>
 </html>

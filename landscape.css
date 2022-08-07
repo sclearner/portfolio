@@ -1,0 +1,361 @@
+/*************** Landscape **********************/
+* {
+    --size-default: 2vh;
+    --size-avatar: 15vh;
+    --nav-height: 5vh;
+    scroll-behavior: smooth;
+    font-family: 'Josefin Sans',sans-serif;
+    font-size: var(--size-default);
+}
+
+a {
+    text-decoration: none;
+    color: #ccc; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.desktop .navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: #151515;
+    text-align: center;
+    z-index: 2003;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-shadow: 0 0.4vh 0.4vh 0 rgba(0, 0, 0, 0.25);
+}
+
+.desktop #home {
+    display: flex;
+    height: var(--nav-height);
+    width: 7.6vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.desktop #home:hover, .button li:hover{
+    background-color: #4f4f4f;
+}
+
+.desktop #home .logo {
+    display: block;
+    width: 1.8vh;
+}
+
+.desktop .navbar > :nth-child(2) {
+    display: flex;
+    flex-grow: 250;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    top: 0;
+}
+
+.button {
+    display: flex;
+    margin-right: 2vh;
+}
+
+.button a {
+    display: block;
+    font-size: 3vh;
+    height: 3.2vh;
+    width: 13vh;
+    padding-top: 0.8vh;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#start {
+    background-image: linear-gradient(to bottom right, #666666, #121212);
+}
+
+.selfie {
+    display: block;
+    position: absolute;
+}
+
+.selfie img {
+    margin-top: 7.0vh;
+    margin-left: 3vw;
+    top: 0;
+    left: 0;
+    height: 130vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .selfie img {
+        margin-left: -3vw;
+    }
+}
+
+.welcome {
+    display: block;
+    position: relative;
+    margin-top: 20%;
+    margin-left: 50vw;
+    color: white;
+}
+
+.welcome h2 {
+    font-size: 7vh;
+    color: #fc5656;
+    margin: 0 0 0 0;
+}
+
+.welcome h3 {
+    font-size: 4vh;
+    margin: 0 0 0 0;
+}
+
+.welcome h4 {
+    font-size: 3vh;
+    margin: 0.5vh 0 0.5vh 0;
+}
+
+#info {
+    top: 100vh;
+    background-color: #ffad4c;
+}
+
+#info .background {
+    position: relative;
+    float: right;
+    display: block;
+    height: 100vh;
+    width: calc(800/1024*100vh);
+}
+
+#info .avatar, #info .name, #info fieldset {
+    position: absolute;
+    top: 8vh;
+    left: 5vw;
+}
+
+#info .name {
+    display: block;
+    left: calc(6vw + 3/4*var(--size-avatar));
+}
+
+#info .name h2 {
+    font-size: 9vh;
+    margin: 1vh 0 0 0;
+}
+
+#info .name h4 {
+    font-size: 3vh;
+    margin: 1vh 0 0 0;
+}
+
+#info .avatar {
+    position: absolute;
+    display: block;
+    height: var(--size-avatar);
+    width: calc(3/4*var(--size-avatar));
+}
+
+#info .learn {
+    position: absolute;
+    top: calc(var(--size-avatar) + 2vh);
+}
+
+#info fieldset{
+    position: relative;
+    display: block;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    margin-bottom: 3vh;
+    width: 50vw;
+    height: 30vh;
+}
+
+#info fieldset legend {
+    margin-left: auto;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-right: auto;
+    font-size: 5vh;
+}
+
+#info ul {
+    list-style-type: disc;
+}
+
+#info li {
+    font-size: 3vh;
+    margin-bottom: 0.5vh;
+}
+
+#skills {
+    top: 200vh;
+    background-color: #56f870;
+}
+
+#skills .bg-decor {
+    --size-plane: 90vh;
+    display: block;
+    position: absolute;
+    float: left;
+    height: var(--size-plane);
+    width: var(--size-plane);
+    top: 10vh;
+    left: calc(50vw - 100vh/2);
+}
+
+#skills .box {
+    position: absolute;
+    background-color: rgba(214, 214, 214, 0.75);
+    border-radius: 2vh;
+} 
+
+#skills .stat {
+    top: 6vh;
+    left: 2vw;
+    height: calc(100vh - 8vh);
+    width: 30vw;
+}
+
+#skills .skills {
+    top: 6vh;
+    left: calc(6vh + 30vw);
+    height: calc((100vh - 8vh)*0.7 - 4vh);
+    width: calc(70vw - 12vh);
+}
+
+#skills .cert {
+    top: calc(4vh + calc((100vh - 8vh)*0.7));
+    left: calc(6vh + 30vw);
+    height: calc((100vh - 8vh)*0.3 + 2vh);
+    width: calc(70vw - 12vh);
+}
+
+#projects {
+    top: 300vh;
+    background-image: linear-gradient(to bottom, #50b5fe, rgba(80, 181, 254, 0.7));
+}
+
+#projects .cloud {
+    display: block;
+    position: absolute;
+    top: calc(100vh - 10vw);
+    left: 0;
+    height: 10vw;
+    width: 100vw;
+}
+
+#projects h2 {
+    display: block;
+    position: absolute;
+    top: var(--nav-height);
+    width: 100vw;
+    font-size: 3vh;
+    text-align: center;
+}
+
+#projects .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: calc(var(--nav-height) + 8vh);
+    left: 5vw;
+    height: 70vh;
+    width: 90vw;
+}
+
+#projects .flex-container .box {
+    background-color: #c4c4c4;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 31vh;
+    width: 28vw;
+}
+
+#projects .flex-container .box:hover {
+    margin: 1vh 0.5vw 1vh 0.5vw;
+    height: 33vh;
+    width: 29vw;
+} 
+
+#contact {
+    top: 400vh;
+    background-image: linear-gradient(to bottom left, #666666, #121212);
+    color: white;
+}
+
+#contact .blank {
+    display: block;
+    height: calc(var(--nav-height) + 2vh);
+    width: 100vw;
+}
+
+#contact h1 {
+    margin: 0 0 1vh 0;
+}
+
+#contact h1, #contact span {
+    font-size: 7vh;
+    font-style: italic;
+}
+
+#contact h2 {
+    font-size: 5vh;
+}
+
+#contact .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 15vw;
+    width: 70vw;
+    height: 18vh;
+}
+
+#contact .credit {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    top: calc(100vh - 7vh);
+    width: 100vw;
+    height: 7vh;
+    margin: 0 0 0 0;
+}
+
+#contact .flex-container img {
+    margin: 1.5vh 0 1.5vh 0;
+    width: 15vh;
+    height: 15vh;
+}
+
+#contact .flex-container img:hover {
+    margin: 0 0 0 0;
+    width: 18vh;
+    height: 18vh;
+}
