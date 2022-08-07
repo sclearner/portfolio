@@ -23,6 +23,7 @@ function switchMode(a,b) {
 
 function updateScreen() {
     var w = window.innerWidth;
+    last_w = w;
     var h = window.innerHeight;
     const node = document.documentElement.style;
     node.setProperty('--dx', w/100.0 + "px");
@@ -40,10 +41,7 @@ if (!isMobile) {
     setInterval(updateScreen, 1000);
 }
 else {
-    for (let i=0; i < 4; i++) { 
-        setTimeout(updateScreen, 1000);
-    }
-    while (Math.abs(last_w-window.innerWidth) > 20) {
-        updateScreen()
-    }
+    do {
+        updateScreen();
+    } while (Math.abs(last_w-window.innerWidth) > 20); 
 }
