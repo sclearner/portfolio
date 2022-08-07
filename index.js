@@ -1,3 +1,6 @@
+var last_w = 0;
+var last_h = 0;
+
 function disableStylesheet(node) {
     node.media = 'none';
 }
@@ -36,6 +39,11 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 if (!isMobile) {
     setInterval(updateScreen, 1000);
 }
-else for (let i=0; i < 4; i++) { 
-    setTimeout(updateScreen, 1000);
+else {
+    for (let i=0; i < 4; i++) { 
+        setTimeout(updateScreen, 1000);
+    }
+    while (Math.abs(last_w-window.innerWidth) > 20) {
+        updateScreen()
+    }
 }
